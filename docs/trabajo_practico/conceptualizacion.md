@@ -73,15 +73,16 @@ La solución propuesta consiste en el desarrollo de la plataforma web DevStudy, 
 DevStudy se concibe como un espacio centralizado que permitirá a docentes y estudiantes interactuar de manera organizada, con acceso inmediato a recursos de estudio, seguimiento académico personalizado y canales de comunicación estructurados. La plataforma busca transformar la experiencia educativa digital, ofreciendo un sistema confiable, accesible y adaptativo que responda a las necesidades actuales de la comunidad universitaria.
 
 ## 8. Glosario de Términos
-Repositorio Académico: Espacio centralizado donde se almacenan y organizan materiales de estudio, guías, ejercicios y documentos relacionados con las asignaturas.
-Interfaz Responsiva: Diseño adaptable que garantiza la correcta visualización y uso de la plataforma en distintos dispositivos (computadoras, tablets, smartphones).
-Gestión de Usuarios: Administración de perfiles y roles dentro del sistema (estudiante, docente, administrador), con permisos diferenciados según las funciones asignadas.
-Full-Stack: Modelo de desarrollo que abarca tanto el frontend (interfaz de usuario) como el backend (lógica del servidor y base de datos) utilizando un mismo lenguaje o conjunto de tecnologías.
-Frontend (React): Parte de la aplicación que interactúa directamente con el usuario, construida con React para lograr modularidad, reutilización de componentes y alto rendimiento.
-Backend (Node.js con Express): Lógica del servidor que gestiona peticiones, procesos y comunicación con la base de datos, implementada en Node.js para mantener un entorno unificado en JavaScript.
-Base de Datos Relacional (PostgreSQL): Sistema de almacenamiento estructurado que organiza la información en tablas relacionadas, garantizando integridad y consistencia de los datos.
-Boilerplate: Plantilla base de código que sirve como punto de partida para proyectos, reduciendo la complejidad inicial y acelerando el desarrollo.
-Integración Continua (CI): Práctica de desarrollo que automatiza la construcción, pruebas y despliegue de software para asegurar calidad y estabilidad en cada actualización
+
+* **Repositorio Académico:** Espacio centralizado donde se almacenan y organizan materiales de estudio, guías, ejercicios y documentos relacionados con las asignaturas.
+* **Interfaz Responsiva:** Diseño adaptable que garantiza la correcta visualización y uso de la plataforma en distintos dispositivos (computadoras, tablets, smartphones).
+* **Gestión de Usuarios:** Administración de perfiles y roles dentro del sistema (estudiante, docente, administrador), con permisos diferenciados según las funciones asignadas.
+* **Full-Stack:** Modelo de desarrollo que abarca tanto el frontend (interfaz de usuario) como el backend (lógica del servidor y base de datos) utilizando un mismo lenguaje o conjunto de tecnologías.
+* **Frontend (React):** Parte de la aplicación que interactúa directamente con el usuario, construida con React para lograr modularidad, reutilización de componentes y alto rendimiento.
+* **Backend (Node.js con Express):** Lógica del servidor que gestiona peticiones, procesos y comunicación con la base de datos, implementada en Node.js para mantener un entorno unificado en JavaScript.
+* **Base de Datos Relacional (PostgreSQL):** Sistema de almacenamiento estructurado que organiza la información en tablas relacionadas, garantizando integridad y consistencia de los datos.
+* **Boilerplate:** Plantilla base de código que sirve como punto de partida para proyectos, reduciendo la complejidad inicial y acelerando el desarrollo.
+* **Integración Continua (CI):** Práctica de desarrollo que automatiza la construcción, pruebas y despliegue de software para asegurar calidad y estabilidad en cada actualización.
 
 ## 9. Riesgos Iniciales y Mitigación
 
