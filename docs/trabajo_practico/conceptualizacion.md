@@ -13,7 +13,7 @@
 ---
 
 ## 2. Definición del Problema
-*(Sección asignada a Elias Salinas)*
+*(Sección asignada a Elias Reinaldo Salinas)*
 
 ---
 
