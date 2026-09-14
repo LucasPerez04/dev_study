@@ -57,14 +57,15 @@ Desarrollar e implementar la plataforma web **DevStudy** para centralizar la ges
 El proyecto DevStudy abarcará el diseño, desarrollo, implementación y despliegue de una plataforma web académica centralizada para la carrera de Informática de la Universidad Católica "Nuestra Señora de la Asunción", orientada a la gestión de contenidos, seguimiento estudiantil y comunicación institucional.
 
 ## 5. Interesados (Stakeholders)
-*(Sección asignada a Luis Saucedo)*
-
----
+Estudiantes de informática: acceden fácilmente a libros y materiales de estudio.
+Profesores: pueden consultar y recomendar materiales a los alumnos.
+Institución educativa: mejora la organización y gestión de los recursos bibliográficos
 
 ## 6. Justificación y Viabilidad
-*(Sección asignada a Luis Saucedo)*
-
----
+Justificación
+El proyecto se realiza para mejorar la organización y el acceso a los materiales de una biblioteca para estudiantes y profesores de informática, facilitando la búsqueda de materiales y ejercitarios
+Viabilidad
+El proyecto es viable porque puede desarrollarse con herramientas y conocimientos disponibles, sin requerir una inversión muy grande. Además, puede implementarse en una computadora y beneficiar tanto a estudiantes como a profesores y bibliotecarios.
 
 ## 7. Visión General de la Solución
 La solución propuesta consiste en el desarrollo de la plataforma web DevStudy, un entorno académico integral diseñado para la carrera de Informática de la Universidad Católica "Nuestra Señora de la Asunción".
@@ -72,9 +73,15 @@ La solución propuesta consiste en el desarrollo de la plataforma web DevStudy, 
 DevStudy se concibe como un espacio centralizado que permitirá a docentes y estudiantes interactuar de manera organizada, con acceso inmediato a recursos de estudio, seguimiento académico personalizado y canales de comunicación estructurados. La plataforma busca transformar la experiencia educativa digital, ofreciendo un sistema confiable, accesible y adaptativo que responda a las necesidades actuales de la comunidad universitaria.
 
 ## 8. Glosario de Términos
-*(Sección asignada a Luis Saucedo)*
-
----
+Repositorio Académico: Espacio centralizado donde se almacenan y organizan materiales de estudio, guías, ejercicios y documentos relacionados con las asignaturas.
+Interfaz Responsiva: Diseño adaptable que garantiza la correcta visualización y uso de la plataforma en distintos dispositivos (computadoras, tablets, smartphones).
+Gestión de Usuarios: Administración de perfiles y roles dentro del sistema (estudiante, docente, administrador), con permisos diferenciados según las funciones asignadas.
+Full-Stack: Modelo de desarrollo que abarca tanto el frontend (interfaz de usuario) como el backend (lógica del servidor y base de datos) utilizando un mismo lenguaje o conjunto de tecnologías.
+Frontend (React): Parte de la aplicación que interactúa directamente con el usuario, construida con React para lograr modularidad, reutilización de componentes y alto rendimiento.
+Backend (Node.js con Express): Lógica del servidor que gestiona peticiones, procesos y comunicación con la base de datos, implementada en Node.js para mantener un entorno unificado en JavaScript.
+Base de Datos Relacional (PostgreSQL): Sistema de almacenamiento estructurado que organiza la información en tablas relacionadas, garantizando integridad y consistencia de los datos.
+Boilerplate: Plantilla base de código que sirve como punto de partida para proyectos, reduciendo la complejidad inicial y acelerando el desarrollo.
+Integración Continua (CI): Práctica de desarrollo que automatiza la construcción, pruebas y despliegue de software para asegurar calidad y estabilidad en cada actualización
 
 ## 9. Riesgos Iniciales y Mitigación
 
