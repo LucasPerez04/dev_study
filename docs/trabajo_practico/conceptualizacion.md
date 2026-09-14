@@ -54,9 +54,7 @@ Desarrollar e implementar la plataforma web **DevStudy** para centralizar la ges
 ---
 
 ## 4. Alcance del Proyecto
-*(Sección asignada a Federico Arrua)*
-
----
+El proyecto DevStudy abarcará el diseño, desarrollo, implementación y despliegue de una plataforma web académica centralizada para la carrera de Informática de la Universidad Católica "Nuestra Señora de la Asunción", orientada a la gestión de contenidos, seguimiento estudiantil y comunicación institucional.
 
 ## 5. Interesados (Stakeholders)
 *(Sección asignada a Luis Saucedo)*
@@ -69,9 +67,9 @@ Desarrollar e implementar la plataforma web **DevStudy** para centralizar la ges
 ---
 
 ## 7. Visión General de la Solución
-*(Sección asignada a Federico Arrua)*
+La solución propuesta consiste en el desarrollo de la plataforma web DevStudy, un entorno académico integral diseñado para la carrera de Informática de la Universidad Católica "Nuestra Señora de la Asunción".
 
----
+DevStudy se concibe como un espacio centralizado que permitirá a docentes y estudiantes interactuar de manera organizada, con acceso inmediato a recursos de estudio, seguimiento académico personalizado y canales de comunicación estructurados. La plataforma busca transformar la experiencia educativa digital, ofreciendo un sistema confiable, accesible y adaptativo que responda a las necesidades actuales de la comunidad universitaria.
 
 ## 8. Glosario de Términos
 *(Sección asignada a Luis Saucedo)*
