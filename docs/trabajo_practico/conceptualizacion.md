@@ -37,21 +37,7 @@ Existe la necesidad explícita de contar con una **plataforma web integral, cent
 
 ## 3. Propósito y Objetivos
 
-### Propósito del Proyecto
-El propósito de **DevStudy** es dotar a la comunidad académica del área de informática de la **Universidad Católica "Nuestra Señora de la Asunción"** de un entorno digital centralizado, moderno y eficiente que optimice el proceso de enseñanza-aprendizaje. La plataforma busca acompañar la trayectoria estudiantil facilitando la gestión de materiales académicos, el seguimiento del progreso individual y la interacción continua entre docentes y alumnos.
 
----
-
-### Objetivos
-
-#### Objetivo General
-Desarrollar e implementar la plataforma web **DevStudy** para centralizar la gestión de contenidos, ejercicios prácticos y consultas académicas de las materias informáticas en la **Universidad Católica "Nuestra Señora de la Asunción"**, mejorando el rendimiento académico y la comunicación institucional durante el periodo académico.
-
-#### Objetivos Específicos
-* **Centralizar los recursos académicos:** Proporcionar un repositorio organizado donde los docentes puedan publicar programas de estudio, guías prácticas, ejercicios de programación y material de apoyo por asignatura.
-* **Ofrecer seguimiento del progreso estudiantil:** Implementar un panel interactivo que permita a los alumnos visualizar el avance de su plan de estudios, entregas pendientes y nivel de cumplimiento por materia.
-* **Fomentar la comunicación estructurada:** Canalizar las dudas, debates teóricos y consultas de código a través de un espacio de discusión dedicado para evitar la dispersión de información en chats informales.
-* **Garantizar una experiencia accesible y adaptativa:** Diseñar una interfaz web intuitiva, de rápida carga y compatible con dispositivos móviles y de escritorio para el uso cotidiano de la comunidad de la **UC**.
 
 ---
 
