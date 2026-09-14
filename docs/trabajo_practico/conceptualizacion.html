@@ -32,7 +32,9 @@
         }
         h1 { border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; margin-top: 0; }
         h2 { margin-top: 24px; border-bottom: 1px solid #e1e4e8; padding-bottom: 6px; }
-        ul { padding-left: 20px; }
+        h3 { margin-top: 18px; margin-bottom: 8px; }
+        h4 { margin-top: 14px; margin-bottom: 6px; }
+        ul, ol { padding-left: 20px; }
         li { margin-bottom: 8px; }
         a { color: #0366d6; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -54,15 +56,17 @@
         tr:nth-child(even) {
             background-color: #fcfcfc;
         }
-        .assigned {
-            color: #57606a;
-            font-style: italic;
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e1e4e8;
+            margin: 24px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Enlace para volver a la portada principal -->
+        <!-- Enlace de retorno al portal index.html -->
         <a href="../index.html" class="back-link">← Volver al Índice Principal</a>
 
         <h1>Entrega 1: Conceptualización del Proyecto — DevStudy</h1>
@@ -82,26 +86,83 @@
             <li><strong>Cliente / Usuario Real:</strong> Estudiantes y docentes de la carrera de Ingeniería de Software.</li>
         </ul>
 
+        <hr>
+
         <h2>2. Definición del Problema</h2>
-        <p class="assigned"><em>(Sección asignada a Elias Salinas)</em></p>
+        
+        <h3>Contexto y Problema Principal</h3>
+        <p>En el ámbito universitario de las carreras informáticas (como Ingeniería de Software, Ciencias de la Computación o Análisis de Sistemas), el proceso de aprendizaje enfrenta una dispersión y fragmentación constante de las herramientas y recursos de estudio. Actualmente, los estudiantes deben recurrir a múltiples plataformas externas e independientes para cubrir sus necesidades académicas cotidianas:</p>
+        
+        <ul>
+            <li><strong>Dispersión de materiales:</strong> Contenidos teóricos, ejercitarios, diapositivas y guías distribuidos de forma no centralizada (carpetas compartidas, correo electrónico, chats de mensajería).</li>
+            <li><strong>Falta de seguimiento del progreso académico:</strong> Inexistencia de un entorno único que permita a los alumnos medir su avance por materia, visualizar temas pendientes o autoevaluarse.</li>
+            <li><strong>Canales de comunicación no estructurados:</strong> Consultas y debates sobre código o ejercicios que se pierden en grupos de chat informales, dificultando la retroalimentación oportuna por parte de los profesores o auxiliares.</li>
+            <li><strong>Dificultad en la gestión de prácticas de programación:</strong> Ausencia de una vía integrada donde el docente pueda centralizar ejercicios prácticos y los estudiantes puedan abordarlos de forma guiada y colaborativa.</li>
+        </ul>
+
+        <h3>Impacto y Consecuencias</h3>
+        <p>Esta fragmentación genera:</p>
+        <ol>
+            <li><strong>Pérdida de tiempo y desorganización</strong> en los estudiantes al intentar recopilar el material necesario para preparar exámenes y entregas.</li>
+            <li><strong>Desmotivación y mayor tasa de deserción</strong> en materias con alta curva de aprendizaje técnico, al no contar con un acompañamiento centralizado y fluido.</li>
+            <li><strong>Carga administrativa adicional para el cuerpo docente</strong>, que debe atender consultas repetitivas por canales informales y carece de visibilidad clara sobre las dificultades del alumnado.</li>
+        </ol>
+
+        <h3>Necesidad de la Solución</h3>
+        <p>Existe la necesidad explícita de contar con una <strong>plataforma web integral, centralizada y orientada al área informática (DevStudy)</strong>, que unifique la gestión de recursos de estudio, el seguimiento individual de contenidos y la interacción académica entre docentes y estudiantes de la carrera.</p>
+
+        <hr>
 
         <h2>3. Propósito y Objetivos</h2>
-        <p class="assigned"><em>(Sección asignada a Elias Salinas)</em></p>
+
+        <h3>Objetivos</h3>
+        
+        <h4>Objetivo General</h4>
+        <p>Desarrollar e implementar la plataforma web <strong>DevStudy</strong> para centralizar la gestión de contenidos, ejercicios prácticos y consultas académicas de las materias informáticas en la <strong>Universidad Católica "Nuestra Señora de la Asunción"</strong>, mejorando el rendimiento académico y la comunicación institucional durante el periodo académico.</p>
+
+        <h4>Objetivos Específicos</h4>
+        <ul>
+            <li><strong>Centralizar los recursos académicos:</strong> Proporcionar un repositorio organizado donde los docentes puedan publicar programas de estudio, guías prácticas, ejercicios de programación y material de apoyo por asignatura.</li>
+            <li><strong>Ofrecer seguimiento del progreso estudiantil:</strong> Implementar un panel interactivo que permita a los alumnos visualizar el avance de su plan de estudios, entregas pendientes y nivel de cumplimiento por materia.</li>
+            <li><strong>Fomentar la comunicación estructurada:</strong> Canalizar las dudas, debates teóricos y consultas de código a través de un espacio de discusión dedicado para evitar la dispersión de información en chats informales.</li>
+            <li><strong>Garantizar una experiencia accesible y adaptativa:</strong> Diseñar una interfaz web intuitiva, de rápida carga y compatible con dispositivos móviles y de escritorio para el uso cotidiano de la comunidad de la <strong>UC</strong>.</li>
+        </ul>
+
+        <hr>
 
         <h2>4. Alcance del Proyecto</h2>
-        <p class="assigned"><em>(Sección asignada a Federico Arrua)</em></p>
+        <p>El proyecto DevStudy abarcará el diseño, desarrollo, implementación y despliegue de una plataforma web académica centralizada para la carrera de Informática de la Universidad Católica "Nuestra Señora de la Asunción", orientada a la gestión de contenidos, seguimiento estudiantil y comunicación institucional.</p>
 
         <h2>5. Interesados (Stakeholders)</h2>
-        <p class="assigned"><em>(Sección asignada a Luis Saucedo)</em></p>
+        <ul>
+            <li><strong>Estudiantes de informática:</strong> acceden fácilmente a libros y materiales de estudio.</li>
+            <li><strong>Profesores:</strong> pueden consultar y recomendar materiales a los alumnos.</li>
+            <li><strong>Institución educativa:</strong> mejora la organización y gestión de los recursos bibliográficos.</li>
+        </ul>
 
         <h2>6. Justificación y Viabilidad</h2>
-        <p class="assigned"><em>(Sección asignada a Luis Saucedo)</em></p>
+        <h3>Justificación</h3>
+        <p>El proyecto se realiza para mejorar la organización y el acceso a los materiales de una biblioteca para estudiantes y profesores de informática, facilitando la búsqueda de materiales y ejercitarios.</p>
+        
+        <h3>Viabilidad</h3>
+        <p>El proyecto es viable porque puede desarrollarse con herramientas y conocimientos disponibles, sin requerir una inversión muy grande. Además, puede implementarse en una computadora y beneficiar tanto a estudiantes como a profesores y bibliotecarios.</p>
 
         <h2>7. Visión General de la Solución</h2>
-        <p class="assigned"><em>(Sección asignada a Federico Arrua)</em></p>
+        <p>La solución propuesta consiste en el desarrollo de la plataforma web DevStudy, un entorno académico integral diseñado para la carrera de Informática de la Universidad Católica "Nuestra Señora de la Asunción".</p>
+        <p>DevStudy se concibe como un espacio centralizado que permitirá a docentes y estudiantes interactuar de manera organizada, con acceso inmediato a recursos de estudio, seguimiento académico personalizado y canales de comunicación estructurados. La plataforma busca transformar la experiencia educativa digital, ofreciendo un sistema confiable, accesible y adaptativo que responda a las necesidades actuales de la comunidad universitaria.</p>
 
         <h2>8. Glosario de Términos</h2>
-        <p class="assigned"><em>(Sección asignada a Luis Saucedo)</em></p>
+        <ul>
+            <li><strong>Repositorio Académico:</strong> Espacio centralizado donde se almacenan y organizan materiales de estudio, guías, ejercicios y documentos relacionados con las asignaturas.</li>
+            <li><strong>Interfaz Responsiva:</strong> Diseño adaptable que garantiza la correcta visualización y uso de la plataforma en distintos dispositivos (computadoras, tablets, smartphones).</li>
+            <li><strong>Gestión de Usuarios:</strong> Administración de perfiles y roles dentro del sistema (estudiante, docente, administrador), con permisos diferenciados según las funciones asignadas.</li>
+            <li><strong>Full-Stack:</strong> Modelo de desarrollo que abarca tanto el frontend (interfaz de usuario) como el backend (lógica del servidor y base de datos) utilizando un mismo lenguaje o conjunto de tecnologías.</li>
+            <li><strong>Frontend (React):</strong> Parte de la aplicación que interactúa directamente con el usuario, construida con React para lograr modularidad, reutilización de componentes y alto rendimiento.</li>
+            <li><strong>Backend (Node.js con Express):</strong> Lógica del servidor que gestiona peticiones, procesos y comunicación con la base de datos, implementada en Node.js para mantener un entorno unificado en JavaScript.</li>
+            <li><strong>Base de Datos Relacional (PostgreSQL):</strong> Sistema de almacenamiento estructurado que organiza la información en tablas relacionadas, garantizando integridad y consistencia de los datos.</li>
+            <li><strong>Boilerplate:</strong> Plantilla base de código que sirve como punto de partida para proyectos, reduciendo la complejidad inicial y acelerando el desarrollo.</li>
+            <li><strong>Integración Continua (CI):</strong> Práctica de desarrollo que automatiza la construcción, pruebas y despliegue de software para asegurar calidad y estabilidad en cada actualización.</li>
+        </ul>
 
         <h2>9. Riesgos Iniciales y Mitigación</h2>
         <table>
@@ -140,6 +201,8 @@
                 </tr>
             </tbody>
         </table>
+
+        <hr>
 
         <h2>10. Selección Tecnológica Preliminar</h2>
         <ul>
