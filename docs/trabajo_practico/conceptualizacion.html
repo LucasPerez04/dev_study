@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStudy — Entrega 1: Conceptualización del Proyecto</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #24292e;
+            background-color: #f6f8fa;
+        }
+        .container {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 32px;
+        }
+        h1 { border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; margin-top: 0; }
+        h2 { margin-top: 24px; border-bottom: 1px solid #e1e4e8; padding-bottom: 6px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        th, td {
+            border: 1px solid #e1e4e8;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+        .assigned {
+            color: #57606a;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Entrega 1: Conceptualización del Proyecto — DevStudy</h1>
+
+        <h2>1. Presentación del Proyecto</h2>
+        <ul>
+            <li><strong>Nombre del sistema:</strong> DevStudy</li>
+            <li><strong>Integrantes del Grupo y Roles:</strong>
+                <ul>
+                    <li><strong>Lucas Perez</strong></li>
+                    <li><strong>Elias Salinas</strong></li>
+                    <li><strong>Federico Arrua</strong></li>
+                    <li><strong>Luis Saucedo</strong></li>
+                </ul>
+            </li>
+            <li><strong>Profesor de la Cátedra:</strong> Ing. Fernando Jose Lesme</li>
+            <li><strong>Cliente / Usuario Real:</strong> Estudiantes y docentes de la carrera de Ingeniería de Software.</li>
+        </ul>
+
+        <h2>2. Definición del Problema</h2>
+        <p class="assigned"><em>(Sección asignada a Elias Salinas)</em></p>
+
+        <h2>3. Propósito y Objetivos</h2>
+        <p class="assigned"><em>(Sección asignada a Elias Salinas)</em></p>
+
+        <h2>4. Alcance del Proyecto</h2>
+        <p class="assigned"><em>(Sección asignada a Federico Arrua)</em></p>
+
+        <h2>5. Interesados (Stakeholders)</h2>
+        <p class="assigned"><em>(Sección asignada a Luis Saucedo)</em></p>
+
+        <h2>6. Justificación y Viabilidad</h2>
+        <p class="assigned"><em>(Sección asignada a Luis Saucedo)</em></p>
+
+        <h2>7. Visión General de la Solución</h2>
+        <p class="assigned"><em>(Sección asignada a Federico Arrua)</em></p>
+
+        <h2>8. Glosario de Términos</h2>
+        <p class="assigned"><em>(Sección asignada a Luis Saucedo)</em></p>
+
+        <h2>9. Riesgos Iniciales y Mitigación</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Riesgo Identificado</th>
+                    <th>Tipo / Categoría</th>
+                    <th>Nivel</th>
+                    <th>Estrategia de Mitigación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Curva de aprendizaje del stack (React / Node.js)</strong></td>
+                    <td>Técnico</td>
+                    <td>Medio</td>
+                    <td>Realización de talleres internos y uso de plantillas base (<em>boilerplates</em>) para agilizar la puesta en marcha.</td>
+                </tr>
+                <tr>
+                    <td><strong>Disponibilidad acotada de tiempo de los integrantes</strong></td>
+                    <td>Planificación</td>
+                    <td>Alto</td>
+                    <td>Definición de un alcance V1.0 bien delimitado y asignación clara de tareas mediante asignaciones de Git.</td>
+                </tr>
+                <tr>
+                    <td><strong>Incompatibilidad o fallos en el despliegue de GitHub Pages</strong></td>
+                    <td>Infraestructura</td>
+                    <td>Bajo</td>
+                    <td>Configuración desde el inicio del archivo <code>.nojekyll</code> e integración continua probada en <code>/docs</code>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Desalineación con las expectativas de la cátedra</strong></td>
+                    <td>Alcance / Cliente</td>
+                    <td>Medio</td>
+                    <td>Revisiones periódicas del documento de conceptualización con el Ing. Fernando Jose Lesme.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>10. Selección Tecnológica Preliminar</h2>
+        <ul>
+            <li><strong>Frontend — React:</strong> Se elige por su arquitectura basada en componentes reutilizables, lo que facilita el desarrollo de una interfaz de usuario modular, declarativa y de alto rendimiento.</li>
+            <li><strong>Backend — Node.js (con Express):</strong> Permite mantener un único lenguaje de programación (JavaScript) en todo el stack (<em>full-stack</em>), facilitando la integración con la base de datos y ofreciendo alta eficiencia en el manejo de peticiones asíncronas.</li>
+            <li><strong>Base de Datos — PostgreSQL:</strong> Se selecciona un motor relacional sólido, confiable y de código abierto para garantizar la integridad referencial y el modelado estructurado de usuarios, cursos y recursos didácticos.</li>
+        </ul>
+    </div>
+</body>
+</html>
