@@ -31,12 +31,24 @@ Esta fragmentación genera:
 ### Necesidad de la Solución
 Existe la necesidad explícita de contar con una **plataforma web integral, centralizada y orientada al área informática (DevStudy)**, que unifique la gestión de recursos de estudio, el seguimiento individual de contenidos y la interacción académica entre docentes y estudiantes de la carrera.
 
-```
+
 
 ---
 
 ## 3. Propósito y Objetivos
 
+---
+
+### Objetivos
+
+#### Objetivo General
+Desarrollar e implementar la plataforma web **DevStudy** para centralizar la gestión de contenidos, ejercicios prácticos y consultas académicas de las materias informáticas en la **Universidad Católica "Nuestra Señora de la Asunción"**, mejorando el rendimiento académico y la comunicación institucional durante el periodo académico.
+
+#### Objetivos Específicos
+* **Centralizar los recursos académicos:** Proporcionar un repositorio organizado donde los docentes puedan publicar programas de estudio, guías prácticas, ejercicios de programación y material de apoyo por asignatura.
+* **Ofrecer seguimiento del progreso estudiantil:** Implementar un panel interactivo que permita a los alumnos visualizar el avance de su plan de estudios, entregas pendientes y nivel de cumplimiento por materia.
+* **Fomentar la comunicación estructurada:** Canalizar las dudas, debates teóricos y consultas de código a través de un espacio de discusión dedicado para evitar la dispersión de información en chats informales.
+* **Garantizar una experiencia accesible y adaptativa:** Diseñar una interfaz web intuitiva, de rápida carga y compatible con dispositivos móviles y de escritorio para el uso cotidiano de la comunidad de la **UC**.
 
 
 ---
