@@ -214,62 +214,7 @@
 <hr>
 <h2>4. Modelo de casos de uso <em>(Lucas Perez)</em></h2>
 <h3>4.1 Diagrama de casos de uso</h3>
-<pre class="mermaid">flowchart LR
-    EST([&#34;Estudiante&#34;])
-    DOC([&#34;Docente&#34;])
-    ADM([&#34;Administrador&#34;])
-
-    subgraph SIS[&#34;Sistema DevStudy&#34;]
-        CU01([&#34;CU-01 Registrarse&#34;])
-        CU02([&#34;CU-02 Iniciar sesión&#34;])
-        CU03([&#34;CU-03 Gestionar usuarios y roles&#34;])
-        CU04([&#34;CU-04 Gestionar materias y docentes&#34;])
-        CU05([&#34;CU-05 Inscribirse en una materia&#34;])
-        CU06([&#34;CU-06 Publicar material&#34;])
-        CU07([&#34;CU-07 Consultar y descargar material&#34;])
-        CU08([&#34;CU-08 Buscar y filtrar material&#34;])
-        CU09([&#34;CU-09 Marcar material como completado&#34;])
-        CU10([&#34;CU-10 Publicar ejercicio&#34;])
-        CU11([&#34;CU-11 Entregar ejercicio&#34;])
-        CU12([&#34;CU-12 Evaluar entrega&#34;])
-        CU13([&#34;CU-13 Consultar progreso&#34;])
-        CU14([&#34;CU-14 Seguimiento del curso&#34;])
-        CU15([&#34;CU-15 Publicar consulta en el foro&#34;])
-        CU16([&#34;CU-16 Responder consulta&#34;])
-        CU17([&#34;CU-17 Moderar foro&#34;])
-        CU18([&#34;CU-18 Ver notificaciones&#34;])
-    end
-
-    EST --- CU01
-    EST --- CU02
-    EST --- CU05
-    EST --- CU07
-    EST --- CU11
-    EST --- CU13
-    EST --- CU15
-    EST --- CU16
-    EST --- CU18
-
-    DOC --- CU02
-    DOC --- CU06
-    DOC --- CU07
-    DOC --- CU10
-    DOC --- CU12
-    DOC --- CU14
-    DOC --- CU16
-    DOC --- CU17
-    DOC --- CU18
-
-    ADM --- CU02
-    ADM --- CU03
-    ADM --- CU04
-    ADM --- CU17
-
-    CU08 -.-&gt;|&#34;«extend»&#34;| CU07
-    CU09 -.-&gt;|&#34;«extend»&#34;| CU07
-
-    classDef actor fill:#fff3cd,stroke:#856404,color:#000
-    class EST,DOC,ADM actor
+<img src="imagenes/casos_de_uso.svg" alt="Diagrama de casos de uso" style="max-width:100%; height:auto;">
 </pre>
 <p><strong>Nota:</strong> todos los casos de uso, excepto CU-01 y CU-02, tienen como precondición una sesión iniciada con el rol indicado.</p>
 <h3>4.2 Resumen de casos de uso</h3>

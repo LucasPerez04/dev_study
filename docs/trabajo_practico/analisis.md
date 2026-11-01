@@ -67,64 +67,7 @@
 
 ### 4.1 Diagrama de casos de uso
 
-```mermaid
-flowchart LR
-    EST(["Estudiante"])
-    DOC(["Docente"])
-    ADM(["Administrador"])
-
-    subgraph SIS["Sistema DevStudy"]
-        CU01(["CU-01 Registrarse"])
-        CU02(["CU-02 Iniciar sesión"])
-        CU03(["CU-03 Gestionar usuarios y roles"])
-        CU04(["CU-04 Gestionar materias y docentes"])
-        CU05(["CU-05 Inscribirse en una materia"])
-        CU06(["CU-06 Publicar material"])
-        CU07(["CU-07 Consultar y descargar material"])
-        CU08(["CU-08 Buscar y filtrar material"])
-        CU09(["CU-09 Marcar material como completado"])
-        CU10(["CU-10 Publicar ejercicio"])
-        CU11(["CU-11 Entregar ejercicio"])
-        CU12(["CU-12 Evaluar entrega"])
-        CU13(["CU-13 Consultar progreso"])
-        CU14(["CU-14 Seguimiento del curso"])
-        CU15(["CU-15 Publicar consulta en el foro"])
-        CU16(["CU-16 Responder consulta"])
-        CU17(["CU-17 Moderar foro"])
-        CU18(["CU-18 Ver notificaciones"])
-    end
-
-    EST --- CU01
-    EST --- CU02
-    EST --- CU05
-    EST --- CU07
-    EST --- CU11
-    EST --- CU13
-    EST --- CU15
-    EST --- CU16
-    EST --- CU18
-
-    DOC --- CU02
-    DOC --- CU06
-    DOC --- CU07
-    DOC --- CU10
-    DOC --- CU12
-    DOC --- CU14
-    DOC --- CU16
-    DOC --- CU17
-    DOC --- CU18
-
-    ADM --- CU02
-    ADM --- CU03
-    ADM --- CU04
-    ADM --- CU17
-
-    CU08 -.->|"«extend»"| CU07
-    CU09 -.->|"«extend»"| CU07
-
-    classDef actor fill:#fff3cd,stroke:#856404,color:#000
-    class EST,DOC,ADM actor
-```
+![Diagrama de casos de uso](imagenes/casos_de_uso.svg)
 
 **Nota:** todos los casos de uso, excepto CU-01 y CU-02, tienen como precondición una sesión iniciada con el rol indicado.
 
