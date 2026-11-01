@@ -67,7 +67,7 @@
 
 ### 4.1 Diagrama de casos de uso
 
-![Diagrama de casos de uso](imagenes/casos_de_uso.svg)
+![Diagrama de casos de uso](../imagenes/casos_de_uso.svg)
 
 **Nota:** todos los casos de uso, excepto CU-01 y CU-02, tienen como precondición una sesión iniciada con el rol indicado.
 
