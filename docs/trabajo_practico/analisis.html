@@ -1,0 +1,685 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=claude:viewport-fit-sides content=cover><style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-right:env(safe-area-inset-right,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}</style><style>.md-table{overflow-x:auto}@media print{.md-table{overflow-x:visible}}</style><style>:root{color-scheme:light dark;--md-bg:#fff;--md-text:rgba(0,0,0,.8);--md-muted:rgba(0,0,0,.6);--md-fill:rgba(0,0,0,.04);--md-fill-strong:rgba(0,0,0,.06);--md-rule:rgba(0,0,0,.1);--md-rule-strong:rgba(0,0,0,.16);--md-link:hsl(210 100% 45%)}@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){--md-bg:#0d0d0d;--md-text:rgba(255,255,255,.85);--md-muted:rgba(255,255,255,.6);--md-fill:rgba(255,255,255,.06);--md-fill-strong:rgba(255,255,255,.09);--md-rule:rgba(255,255,255,.14);--md-rule-strong:rgba(255,255,255,.22);--md-link:hsl(210 100% 72%)}}:root[data-theme="dark"]{color-scheme:dark;--md-bg:#0d0d0d;--md-text:rgba(255,255,255,.85);--md-muted:rgba(255,255,255,.6);--md-fill:rgba(255,255,255,.06);--md-fill-strong:rgba(255,255,255,.09);--md-rule:rgba(255,255,255,.14);--md-rule-strong:rgba(255,255,255,.22);--md-link:hsl(210 100% 72%)}:root[data-theme="light"]{color-scheme:light}@media print{:root,:root[data-theme="dark"]{color-scheme:light;--md-bg:#fff;--md-text:rgba(0,0,0,.8);--md-muted:rgba(0,0,0,.6);--md-fill:rgba(0,0,0,.04);--md-fill-strong:rgba(0,0,0,.06);--md-rule:rgba(0,0,0,.1);--md-rule-strong:rgba(0,0,0,.16);--md-link:hsl(210 100% 45%)}}body{background:var(--md-bg);color:var(--md-text);max-width:720px;margin:0 auto;padding:32px;display:flex;flex-direction:column;gap:10px;font:14px/1.55 -apple-system,BlinkMacSystemFont,'SF Pro','Segoe UI',sans-serif;overflow-wrap:break-word}body>:first-child{margin-top:0}h1,h2,h3,h4,h5,h6{margin:6px 0 0;line-height:1.25;font-weight:600;text-wrap:balance}h1{font-size:1.35em}h2{font-size:1.15em;color:var(--md-muted)}h3,h4,h5,h6{font-size:1em}p,ul,ol,blockquote,table,pre,hr{margin:0}strong{font-weight:600}a{color:var(--md-link);text-decoration:none}a:hover{text-decoration:underline}ul,ol{display:flex;flex-direction:column;gap:6px;padding-left:22px}ul{list-style:disc}ol{list-style:decimal}:is(li,td,th)>*+:is(p,ul,ol,blockquote){margin-top:6px}blockquote{display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--md-rule);padding-left:10px;color:var(--md-muted)}:not(pre)>code{background:var(--md-fill);padding:1px 3px;border-radius:4px;font:.92em 'SF Mono',ui-monospace,Menlo,Consolas,monospace}a>code{background:none;color:inherit}pre{background:var(--md-fill);padding:10px 12px;border-radius:6px;overflow-x:auto;font:12px/1.5 'SF Mono',ui-monospace,Menlo,Consolas,monospace;margin-block:4px}pre code{background:none;padding:0;font:inherit}table{width:100%;border-collapse:separate;border-spacing:2px;font:inherit}th,td{padding:6px 8px;border-radius:3px;text-align:left;vertical-align:top}th{background:var(--md-fill-strong);font-weight:600}td{background:var(--md-fill)}:is(th,td) :not(pre)>code{background:transparent}hr{border:0;border-top:1px solid var(--md-rule-strong);margin-block:10px}img{max-width:100%;height:auto;border-radius:4px}</style>
+</head><body>
+<h1>DevStudy — Entrega 2: Análisis</h1>
+<p><strong>Materia:</strong> Ingeniería de Software · <strong>Profesor:</strong> Ing. Fernando Jose Lesme
+<strong>Integrantes:</strong> Luis Saucedo · Federico Arrua · Elias Salinas · Lucas Perez</p>
+<blockquote>
+<p>Este documento define <strong>qué debe hacer DevStudy</strong>, desde la perspectiva del negocio y del usuario, y sirve de base para el diseño técnico de la Entrega 3.</p>
+</blockquote>
+<hr>
+<h2>1. Distribución de responsabilidades</h2>
+<div class="md-table" role="group" aria-label="Table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tópico</th>
+<th>Responsable</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2. Requisitos funcionales</td>
+<td><strong>Lucas Perez</strong></td>
+<td>Completo</td>
+</tr>
+<tr>
+<td>3. Requisitos no funcionales</td>
+<td>Luis Saucedo</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>4. Modelo de casos de uso</td>
+<td><strong>Lucas Perez</strong></td>
+<td>Completo</td>
+</tr>
+<tr>
+<td>5. Modelo de dominio</td>
+<td>Federico Arrua</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>6. Diagramas de comportamiento</td>
+<td>Federico Arrua</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>7. Prototipo de interfaz (mockups)</td>
+<td>Elias Salinas</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>8. Reglas del negocio</td>
+<td>Luis Saucedo</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>9. Matriz de trazabilidad</td>
+<td>Elias Salinas</td>
+<td>Pendiente</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Convenciones comunes (para que todos usemos los mismos códigos)</h3>
+<ul>
+<li><strong>Actores:</strong> Estudiante, Docente, Administrador (según el glosario de la Entrega 1).</li>
+<li><strong>Identificadores:</strong> <code>RF-xx</code> requisitos funcionales · <code>RNF-xx</code> no funcionales · <code>CU-xx</code> casos de uso · <code>RN-xx</code> reglas del negocio.</li>
+<li><strong>Prioridad:</strong> <strong>Alta</strong> = imprescindible para la V1.0 · <strong>Media</strong> = importante · <strong>Baja</strong> = deseable.</li>
+</ul>
+<hr>
+<h2>2. Requisitos funcionales <em>(Lucas Perez)</em></h2>
+<div class="md-table" role="group" aria-label="Table" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requisito: el sistema deberá...</th>
+<th style="text-align:center">Prioridad</th>
+<th>Criterio de verificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-01</td>
+<td>Permitir el registro de usuarios con nombre, correo y contraseña.</td>
+<td style="text-align:center">Alta</td>
+<td>Con datos válidos y correo no usado se crea una cuenta con rol Estudiante; un correo repetido es rechazado.</td>
+</tr>
+<tr>
+<td>RF-02</td>
+<td>Permitir iniciar y cerrar sesión, y restablecer la contraseña por correo.</td>
+<td style="text-align:center">Alta</td>
+<td>Credenciales correctas dan acceso al panel del rol; incorrectas, no; tras cerrar sesión no se accede a páginas protegidas.</td>
+</tr>
+<tr>
+<td>RF-03</td>
+<td>Permitir al Administrador crear, editar y desactivar usuarios y asignarles rol.</td>
+<td style="text-align:center">Alta</td>
+<td>Un usuario desactivado no puede iniciar sesión; el rol asignado determina las opciones visibles.</td>
+</tr>
+<tr>
+<td>RF-04</td>
+<td>Permitir al Administrador crear, editar y archivar materias.</td>
+<td style="text-align:center">Alta</td>
+<td>La materia creada aparece en el catálogo; una archivada deja de ofrecerse para inscripción.</td>
+</tr>
+<tr>
+<td>RF-05</td>
+<td>Permitir al Administrador asignar docentes a una materia.</td>
+<td style="text-align:center">Alta</td>
+<td>Solo los docentes asignados ven las opciones de publicación de esa materia.</td>
+</tr>
+<tr>
+<td>RF-06</td>
+<td>Permitir al Estudiante inscribirse en materias activas.</td>
+<td style="text-align:center">Alta</td>
+<td>Tras inscribirse accede al contenido de la materia; no puede inscribirse dos veces en la misma.</td>
+</tr>
+<tr>
+<td>RF-07</td>
+<td>Permitir al Docente publicar material (título, descripción, tema, archivo o enlace).</td>
+<td style="text-align:center">Alta</td>
+<td>El material publicado es visible para los inscriptos de esa materia.</td>
+</tr>
+<tr>
+<td>RF-08</td>
+<td>Permitir al Docente editar o eliminar el material que publicó.</td>
+<td style="text-align:center">Media</td>
+<td>Los cambios se reflejan de inmediato; la eliminación pide confirmación.</td>
+</tr>
+<tr>
+<td>RF-09</td>
+<td>Permitir consultar y descargar el material organizado por materia y tema.</td>
+<td style="text-align:center">Alta</td>
+<td>Solo usuarios inscriptos (o docentes de la materia) acceden al material.</td>
+</tr>
+<tr>
+<td>RF-10</td>
+<td>Permitir buscar y filtrar material por materia, tema, tipo y palabra clave.</td>
+<td style="text-align:center">Media</td>
+<td>Los resultados contienen solo material que cumple todos los filtros aplicados.</td>
+</tr>
+<tr>
+<td>RF-11</td>
+<td>Permitir al Docente publicar ejercicios de programación (título, enunciado, tema, dificultad, fecha límite).</td>
+<td style="text-align:center">Alta</td>
+<td>El ejercicio aparece a los inscriptos con su fecha límite.</td>
+</tr>
+<tr>
+<td>RF-12</td>
+<td>Permitir al Estudiante entregar su resolución de un ejercicio (archivo o código).</td>
+<td style="text-align:center">Alta</td>
+<td>La entrega queda registrada con fecha y hora y visible para el docente.</td>
+</tr>
+<tr>
+<td>RF-13</td>
+<td>Permitir al Docente calificar una entrega y dejar retroalimentación.</td>
+<td style="text-align:center">Alta</td>
+<td>El estudiante ve la calificación y los comentarios de su entrega.</td>
+</tr>
+<tr>
+<td>RF-14</td>
+<td>Permitir al Estudiante marcar un material como completado.</td>
+<td style="text-align:center">Media</td>
+<td>El material queda marcado y se refleja en el progreso de la materia.</td>
+</tr>
+<tr>
+<td>RF-15</td>
+<td>Mostrar al Estudiante un panel de progreso por materia (avance, pendientes, calificaciones).</td>
+<td style="text-align:center">Alta</td>
+<td>El panel coincide con los materiales completados y las entregas realizadas.</td>
+</tr>
+<tr>
+<td>RF-16</td>
+<td>Mostrar al Docente el avance de sus estudiantes y las entregas pendientes de revisión.</td>
+<td style="text-align:center">Media</td>
+<td>La lista de pendientes incluye todas las entregas sin evaluar de sus materias.</td>
+</tr>
+<tr>
+<td>RF-17</td>
+<td>Permitir crear consultas en el foro de una materia (con tema asociado y fragmento de código).</td>
+<td style="text-align:center">Alta</td>
+<td>La consulta aparece en el foro de esa materia.</td>
+</tr>
+<tr>
+<td>RF-18</td>
+<td>Permitir a Estudiantes y Docentes responder consultas.</td>
+<td style="text-align:center">Alta</td>
+<td>La respuesta se muestra bajo la consulta con autor y fecha.</td>
+</tr>
+<tr>
+<td>RF-19</td>
+<td>Permitir marcar una respuesta como solución y cerrar la consulta (autor o Docente).</td>
+<td style="text-align:center">Baja</td>
+<td>La consulta cerrada muestra la solución destacada y no admite nuevas respuestas.</td>
+</tr>
+<tr>
+<td>RF-20</td>
+<td>Permitir al Docente y al Administrador ocultar o eliminar contenido inapropiado del foro.</td>
+<td style="text-align:center">Media</td>
+<td>El contenido ocultado deja de mostrarse a los demás usuarios.</td>
+</tr>
+<tr>
+<td>RF-21</td>
+<td>Enviar notificaciones internas (material nuevo, ejercicio nuevo, respuesta, evaluación).</td>
+<td style="text-align:center">Baja</td>
+<td>El usuario ve la notificación al ingresar y puede marcarla como leída.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Fuera del alcance de la V1.0</strong> <em>(propuesta, a validar con el grupo)</em>: chat en tiempo real, ejecución y corrección automática de código, autoevaluaciones con corrección automática, aplicación móvil nativa e integración con el sistema académico de la universidad.</p>
+<hr>
+<h2>3. Requisitos no funcionales <em>(Luis Saucedo)</em></h2>
+<p><strong>Pendiente.</strong> Cubrir: rendimiento, seguridad, usabilidad, disponibilidad, escalabilidad y portabilidad, con valores medibles. Referencias de la Entrega 1: interfaz responsiva y de carga rápida, stack React + Node.js/Express + PostgreSQL.</p>
+<hr>
+<h2>4. Modelo de casos de uso <em>(Lucas Perez)</em></h2>
+<h3>4.1 Diagrama de casos de uso</h3>
+<pre class="mermaid">flowchart LR
+    EST([&#34;Estudiante&#34;])
+    DOC([&#34;Docente&#34;])
+    ADM([&#34;Administrador&#34;])
+
+    subgraph SIS[&#34;Sistema DevStudy&#34;]
+        CU01([&#34;CU-01 Registrarse&#34;])
+        CU02([&#34;CU-02 Iniciar sesión&#34;])
+        CU03([&#34;CU-03 Gestionar usuarios y roles&#34;])
+        CU04([&#34;CU-04 Gestionar materias y docentes&#34;])
+        CU05([&#34;CU-05 Inscribirse en una materia&#34;])
+        CU06([&#34;CU-06 Publicar material&#34;])
+        CU07([&#34;CU-07 Consultar y descargar material&#34;])
+        CU08([&#34;CU-08 Buscar y filtrar material&#34;])
+        CU09([&#34;CU-09 Marcar material como completado&#34;])
+        CU10([&#34;CU-10 Publicar ejercicio&#34;])
+        CU11([&#34;CU-11 Entregar ejercicio&#34;])
+        CU12([&#34;CU-12 Evaluar entrega&#34;])
+        CU13([&#34;CU-13 Consultar progreso&#34;])
+        CU14([&#34;CU-14 Seguimiento del curso&#34;])
+        CU15([&#34;CU-15 Publicar consulta en el foro&#34;])
+        CU16([&#34;CU-16 Responder consulta&#34;])
+        CU17([&#34;CU-17 Moderar foro&#34;])
+        CU18([&#34;CU-18 Ver notificaciones&#34;])
+    end
+
+    EST --- CU01
+    EST --- CU02
+    EST --- CU05
+    EST --- CU07
+    EST --- CU11
+    EST --- CU13
+    EST --- CU15
+    EST --- CU16
+    EST --- CU18
+
+    DOC --- CU02
+    DOC --- CU06
+    DOC --- CU07
+    DOC --- CU10
+    DOC --- CU12
+    DOC --- CU14
+    DOC --- CU16
+    DOC --- CU17
+    DOC --- CU18
+
+    ADM --- CU02
+    ADM --- CU03
+    ADM --- CU04
+    ADM --- CU17
+
+    CU08 -.-&gt;|&#34;«extend»&#34;| CU07
+    CU09 -.-&gt;|&#34;«extend»&#34;| CU07
+
+    classDef actor fill:#fff3cd,stroke:#856404,color:#000
+    class EST,DOC,ADM actor
+</pre>
+<p><strong>Nota:</strong> todos los casos de uso, excepto CU-01 y CU-02, tienen como precondición una sesión iniciada con el rol indicado.</p>
+<h3>4.2 Resumen de casos de uso</h3>
+<div class="md-table" role="group" aria-label="Table" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso de uso</th>
+<th>Actor(es)</th>
+<th>RF cubiertos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU-01</td>
+<td>Registrarse</td>
+<td>Estudiante</td>
+<td>RF-01</td>
+</tr>
+<tr>
+<td>CU-02</td>
+<td>Iniciar sesión</td>
+<td>Todos</td>
+<td>RF-02</td>
+</tr>
+<tr>
+<td>CU-03</td>
+<td>Gestionar usuarios y roles</td>
+<td>Administrador</td>
+<td>RF-03</td>
+</tr>
+<tr>
+<td>CU-04</td>
+<td>Gestionar materias y docentes</td>
+<td>Administrador</td>
+<td>RF-04, RF-05</td>
+</tr>
+<tr>
+<td>CU-05</td>
+<td>Inscribirse en una materia</td>
+<td>Estudiante</td>
+<td>RF-06</td>
+</tr>
+<tr>
+<td>CU-06</td>
+<td>Publicar material</td>
+<td>Docente</td>
+<td>RF-07, RF-08</td>
+</tr>
+<tr>
+<td>CU-07</td>
+<td>Consultar y descargar material</td>
+<td>Estudiante, Docente</td>
+<td>RF-09</td>
+</tr>
+<tr>
+<td>CU-08</td>
+<td>Buscar y filtrar material</td>
+<td>Estudiante, Docente</td>
+<td>RF-10</td>
+</tr>
+<tr>
+<td>CU-09</td>
+<td>Marcar material como completado</td>
+<td>Estudiante</td>
+<td>RF-14</td>
+</tr>
+<tr>
+<td>CU-10</td>
+<td>Publicar ejercicio</td>
+<td>Docente</td>
+<td>RF-11</td>
+</tr>
+<tr>
+<td>CU-11</td>
+<td>Entregar ejercicio</td>
+<td>Estudiante</td>
+<td>RF-12</td>
+</tr>
+<tr>
+<td>CU-12</td>
+<td>Evaluar entrega</td>
+<td>Docente</td>
+<td>RF-13</td>
+</tr>
+<tr>
+<td>CU-13</td>
+<td>Consultar progreso</td>
+<td>Estudiante</td>
+<td>RF-15</td>
+</tr>
+<tr>
+<td>CU-14</td>
+<td>Seguimiento del curso</td>
+<td>Docente</td>
+<td>RF-16</td>
+</tr>
+<tr>
+<td>CU-15</td>
+<td>Publicar consulta en el foro</td>
+<td>Estudiante</td>
+<td>RF-17</td>
+</tr>
+<tr>
+<td>CU-16</td>
+<td>Responder consulta</td>
+<td>Estudiante, Docente</td>
+<td>RF-18, RF-19</td>
+</tr>
+<tr>
+<td>CU-17</td>
+<td>Moderar foro</td>
+<td>Docente, Administrador</td>
+<td>RF-20</td>
+</tr>
+<tr>
+<td>CU-18</td>
+<td>Ver notificaciones</td>
+<td>Estudiante, Docente</td>
+<td>RF-21</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>4.3 Especificación detallada de los casos de uso principales</h3>
+<h4>CU-02 — Iniciar sesión</h4>
+<ul>
+<li><strong>Actores:</strong> Estudiante, Docente, Administrador · <strong>RF:</strong> RF-02</li>
+<li><strong>Precondiciones:</strong> el usuario tiene una cuenta activa.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El usuario abre la pantalla de inicio de sesión.</li>
+<li>Ingresa su correo y contraseña.</li>
+<li>El sistema valida las credenciales.</li>
+<li>El sistema inicia la sesión y muestra el panel correspondiente a su rol.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>3a. Credenciales incorrectas:</em> el sistema muestra un mensaje genérico y vuelve al paso 2.</li>
+<li><em>3b. Cuenta desactivada:</em> el sistema informa que debe contactar al administrador.</li>
+<li><em>2a. Olvidó su contraseña:</em> solicita el restablecimiento; el sistema envía un enlace al correo registrado.</li>
+<li><em>4a. Cerrar sesión:</em> el usuario elige &quot;Cerrar sesión&quot; y el sistema invalida la sesión.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> hay una sesión activa asociada al rol del usuario (o la sesión fue cerrada).</li>
+</ul>
+<h4>CU-05 — Inscribirse en una materia</h4>
+<ul>
+<li><strong>Actor:</strong> Estudiante · <strong>RF:</strong> RF-06</li>
+<li><strong>Precondiciones:</strong> sesión iniciada como Estudiante; existen materias activas.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El estudiante abre el catálogo de materias.</li>
+<li>El sistema lista las materias activas en las que aún no está inscripto.</li>
+<li>El estudiante elige una materia y selecciona &quot;Inscribirme&quot;.</li>
+<li>El sistema registra la inscripción.</li>
+<li>El sistema confirma y la materia aparece en &quot;Mis materias&quot;.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>4a. La materia fue archivada mientras tanto:</em> el sistema informa el error y actualiza el catálogo.</li>
+<li><em>2a. No hay materias disponibles:</em> el sistema muestra un mensaje informativo.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> inscripción activa; el estudiante accede al material, ejercicios y foro de la materia, con progreso inicial en 0 %.</li>
+</ul>
+<h4>CU-06 — Publicar material</h4>
+<ul>
+<li><strong>Actor:</strong> Docente · <strong>RF:</strong> RF-07, RF-08</li>
+<li><strong>Precondiciones:</strong> sesión iniciada como Docente asignado a la materia.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El docente entra a su materia y elige &quot;Nuevo material&quot;.</li>
+<li>El sistema muestra el formulario (título, descripción, tema, archivo o enlace).</li>
+<li>El docente completa los datos y adjunta el archivo o enlace.</li>
+<li>El sistema valida los datos.</li>
+<li>El sistema publica el material, visible para los inscriptos.</li>
+<li>El sistema genera notificaciones (CU-18).</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>4a. Datos obligatorios faltantes o archivo con formato o tamaño no permitido:</em> el sistema indica el error y vuelve al paso 3.</li>
+<li><em>4b. Enlace con formato inválido:</em> el sistema lo rechaza y vuelve al paso 3.</li>
+<li><em>1a. Editar o eliminar material propio:</em> el docente selecciona un material suyo y lo modifica o lo elimina (con confirmación); el cambio se refleja de inmediato.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> el material queda disponible en la materia y tema; los inscriptos fueron notificados.</li>
+</ul>
+<h4>CU-07 — Consultar y descargar material</h4>
+<ul>
+<li><strong>Actores:</strong> Estudiante, Docente · <strong>RF:</strong> RF-09</li>
+<li><strong>Precondiciones:</strong> sesión iniciada; el estudiante está inscripto en la materia (o el docente está asignado a ella).</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El usuario abre &quot;Mis materias&quot; y elige una.</li>
+<li>El sistema muestra el material organizado por tema.</li>
+<li>El usuario selecciona un material.</li>
+<li>El sistema muestra su detalle y ofrece verlo o descargarlo.</li>
+<li>El usuario lo visualiza o lo descarga.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>2a. La materia no tiene material:</em> el sistema informa que aún no hay contenido.</li>
+<li><em>3a. Buscar y filtrar:</em> se ejecuta CU-08 (extend).</li>
+<li><em>4a. Marcar como completado:</em> se ejecuta CU-09 (extend).</li>
+<li><em>5a. Archivo no disponible:</em> el sistema muestra un mensaje de error.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> el usuario accedió al material; no se modifican los datos del material.</li>
+</ul>
+<h4>CU-10 — Publicar ejercicio de programación</h4>
+<ul>
+<li><strong>Actor:</strong> Docente · <strong>RF:</strong> RF-11</li>
+<li><strong>Precondiciones:</strong> sesión iniciada como Docente asignado a la materia.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El docente elige &quot;Nuevo ejercicio&quot; dentro de su materia.</li>
+<li>El sistema muestra el formulario (título, enunciado, tema, dificultad, fecha límite, archivos de apoyo opcionales).</li>
+<li>El docente completa y confirma.</li>
+<li>El sistema valida los datos.</li>
+<li>El sistema publica el ejercicio y notifica a los inscriptos.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>4a. Datos faltantes o fecha límite anterior a la fecha actual:</em> el sistema indica el error y vuelve al paso 3.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> el ejercicio es visible y habilitado para recibir entregas hasta su fecha límite.</li>
+</ul>
+<h4>CU-11 — Entregar ejercicio</h4>
+<ul>
+<li><strong>Actor:</strong> Estudiante · <strong>RF:</strong> RF-12</li>
+<li><strong>Precondiciones:</strong> sesión iniciada; inscripto en la materia; ejercicio publicado y dentro del plazo.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El estudiante abre el ejercicio desde su materia.</li>
+<li>El sistema muestra el enunciado, el estado de la entrega y la fecha límite.</li>
+<li>El estudiante elige &quot;Entregar solución&quot;.</li>
+<li>Adjunta un archivo o pega su código y, opcionalmente, un comentario.</li>
+<li>El sistema valida y registra la entrega con fecha y hora.</li>
+<li>El sistema confirma y marca el estado como &quot;Entregado&quot;.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>5a. Fuera de plazo:</em> el sistema aplica la política de entregas tardías de la materia (a definir en las reglas del negocio).</li>
+<li><em>5b. Archivo con formato o tamaño no permitido:</em> el sistema indica el error y vuelve al paso 4.</li>
+<li><em>3a. Ya existe una entrega:</em> el sistema permite reemplazarla solo si aún no fue evaluada (a confirmar en las reglas del negocio).</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> la entrega queda registrada y aparece en las pendientes de revisión del docente; el progreso del estudiante se actualiza.</li>
+</ul>
+<h4>CU-12 — Evaluar entrega y dar retroalimentación</h4>
+<ul>
+<li><strong>Actor:</strong> Docente · <strong>RF:</strong> RF-13</li>
+<li><strong>Precondiciones:</strong> sesión iniciada como Docente de la materia; existe al menos una entrega sin evaluar.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El docente abre &quot;Entregas pendientes&quot;.</li>
+<li>El sistema lista las entregas sin evaluar de sus materias.</li>
+<li>El docente selecciona una entrega y revisa la solución.</li>
+<li>Ingresa la calificación y sus comentarios.</li>
+<li>Confirma la evaluación.</li>
+<li>El sistema guarda el resultado, cambia el estado a &quot;Evaluado&quot; y notifica al estudiante.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>4a. Calificación fuera del rango permitido:</em> el sistema la rechaza y vuelve al paso 4.</li>
+<li><em>4b. Solicitar corrección:</em> el docente devuelve la entrega con observaciones, sin calificar; queda como &quot;Con observaciones&quot; y el estudiante puede reenviarla.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> la evaluación es visible para el estudiante y se refleja en su progreso.</li>
+</ul>
+<h4>CU-13 — Consultar progreso académico</h4>
+<ul>
+<li><strong>Actor:</strong> Estudiante · <strong>RF:</strong> RF-15</li>
+<li><strong>Precondiciones:</strong> sesión iniciada; inscripto en al menos una materia.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El estudiante abre &quot;Mi progreso&quot;.</li>
+<li>El sistema muestra, por materia, el porcentaje de avance, los materiales completados, los ejercicios entregados y evaluados, y las calificaciones.</li>
+<li>El estudiante selecciona una materia.</li>
+<li>El sistema muestra los temas pendientes y las entregas próximas a vencer.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>2a. Sin inscripciones:</em> el sistema invita a inscribirse en una materia (CU-05).</li>
+<li><em>4a. Materia sin contenido publicado:</em> el sistema muestra &quot;Sin contenido&quot; en lugar de un porcentaje.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> no se modifican datos.</li>
+</ul>
+<h4>CU-15 — Publicar consulta en el foro</h4>
+<ul>
+<li><strong>Actor:</strong> Estudiante · <strong>RF:</strong> RF-17</li>
+<li><strong>Precondiciones:</strong> sesión iniciada; inscripto en la materia.</li>
+<li><strong>Flujo principal:</strong>
+<ol>
+<li>El estudiante abre el foro de la materia y elige &quot;Nueva consulta&quot;.</li>
+<li>Completa título, descripción, tema asociado y, opcionalmente, un fragmento de código.</li>
+<li>El sistema valida los datos.</li>
+<li>El sistema publica la consulta y notifica a los docentes de la materia.</li>
+</ol>
+</li>
+<li><strong>Flujos alternativos:</strong>
+<ul>
+<li><em>3a. Campos obligatorios vacíos:</em> el sistema indica los faltantes y vuelve al paso 2.</li>
+<li><em>2a. Hay consultas similares:</em> el sistema sugiere hilos existentes antes de publicar; el estudiante puede continuar igualmente.</li>
+</ul>
+</li>
+<li><strong>Postcondiciones:</strong> la consulta queda abierta y visible en el foro de la materia.</li>
+</ul>
+<hr>
+<h2>5. Modelo de dominio <em>(Federico Arrua)</em></h2>
+<p><strong>Pendiente.</strong> Diagrama de clases conceptual con entidades, atributos principales y relaciones, sin detalles de implementación.</p>
+<hr>
+<h2>6. Diagramas de comportamiento <em>(Federico Arrua)</em></h2>
+<p><strong>Pendiente.</strong> Diagramas de secuencia o de actividad de los flujos principales de la sección 4.3. Sugeridos: CU-06, CU-11, CU-12 y CU-15/CU-16.</p>
+<hr>
+<h2>7. Prototipo de interfaz (mockups) <em>(Elias Salinas)</em></h2>
+<p><strong>Pendiente.</strong> Wireframes de baja fidelidad de las pantallas principales. Sugeridas a partir de los casos de uso: inicio de sesión, panel del estudiante (mis materias y progreso), vista de materia, detalle de ejercicio y entrega, panel docente (entregas pendientes), foro y administración.</p>
+<hr>
+<h2>8. Reglas del negocio <em>(Luis Saucedo)</em></h2>
+<p><strong>Pendiente.</strong> Varios puntos de la sección 4.3 quedaron marcados &quot;a definir en las reglas del negocio&quot;: política de entregas tardías y de reenvío, rango de calificación, formatos y tamaño máximo de archivos, y forma de calcular el porcentaje de avance.</p>
+<hr>
+<h2>9. Matriz de trazabilidad <em>(Elias Salinas)</em></h2>
+<p><strong>Pendiente.</strong> Relación RF-01…RF-21 con CU-01…CU-18. La columna &quot;RF cubiertos&quot; de la tabla 4.2 sirve como punto de partida.</p>
+
+
+<!--claude-mermaid-runtime-begin:3477-->
+<style>.mermaid-diagram{margin-block:4px}.mermaid-diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}</style>
+<script src="/_runtime/mermaid-11.16.1.min.js"></script>
+<script>(function(){
+var CFG={"palettes":{"light":{"surface":"#f4efe4","text":"#42392e","line":"#8a7f6d","border":"#7a6c52","bg":"#fffdf8"},"dark":{"surface":"#262b34","text":"#f2f3f5","line":"#a8adb8","border":"#9aa4b8","bg":"#1f232b"}}};
+if(typeof mermaid==='undefined')return;
+var pres=Array.prototype.slice.call(document.querySelectorAll('pre.mermaid')).filter(function(p){if(p.hasAttribute('data-claude-mermaid-claimed'))return false;p.setAttribute('data-claude-mermaid-claimed','1');return true;});
+if(!pres.length)return;
+var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+var root=document.documentElement;
+var items=pres.map(function(pre){
+var mount=document.createElement('div');mount.className='mermaid-diagram';
+return {pre:pre,mount:mount,src:pre.textContent||''};
+});
+var seq=0;
+var renderGen=0;
+var lastKey='';
+function pageBg(fallback){
+var els=[document.body,document.documentElement];
+for(var i=0;i<els.length;i++){
+var c=els[i]&&getComputedStyle(els[i]).backgroundColor;
+if(c&&c!=='transparent'&&c!=='rgba(0, 0, 0, 0)')return c;
+}
+return fallback;
+}
+function render(){
+var theme=root.getAttribute('data-theme');
+var dark=theme==='dark'||(!!(mq&&mq.matches)&&theme!=='light');
+var pal=dark?CFG.palettes.dark:CFG.palettes.light;
+var bg=pageBg(pal.bg);
+var key=(dark?'d':'l')+'|'+bg;
+if(key===lastKey)return;
+lastKey=key;
+var gen=++renderGen;
+var font=getComputedStyle(document.body).fontFamily||'sans-serif';
+var nat={useMaxWidth:false};
+mermaid.initialize({
+startOnLoad:false,securityLevel:'strict',theme:'base',
+flowchart:nat,sequence:nat,er:nat,state:nat,class:nat,pie:nat,
+gantt:nat,journey:nat,timeline:nat,gitGraph:nat,mindmap:nat,xyChart:nat,
+quadrantChart:nat,sankey:nat,c4:nat,requirement:nat,block:nat,
+packet:nat,kanban:nat,architecture:nat,radar:nat,
+themeVariables:{background:bg,mainBkg:pal.surface,primaryColor:pal.surface,
+primaryTextColor:pal.text,lineColor:pal.line,primaryBorderColor:pal.border,
+nodeBorder:pal.border,clusterBorder:pal.border,edgeLabelBackground:bg,
+clusterBkg:'rgba(127,127,127,0.07)',titleColor:pal.text,
+darkMode:dark,rowOdd:bg,rowEven:'rgba(127,127,127,0.07)',
+attributeBackgroundColorOdd:bg,attributeBackgroundColorEven:'rgba(127,127,127,0.07)',
+fontSize:'16px',fontFamily:font},
+themeCSS:'.node rect, .node circle, .node polygon, .node path, .cluster rect { stroke-width: 2px; }'
+});
+items.forEach(function(it){
+var id='claude-mermaid-'+seq++;
+mermaid.render(id,it.src).then(function(r){
+if(gen!==renderGen)return;
+var prev=it.pre.previousElementSibling;
+if(prev&&prev.className==='mermaid-diagram'&&prev!==it.mount)return;
+it.mount.innerHTML=r.svg;
+if(!it.mount.parentNode)it.pre.parentNode.insertBefore(it.mount,it.pre);
+it.pre.style.display='none';
+},function(){
+var scratch=document.getElementById(id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+scratch=document.getElementById('d'+id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+if(gen!==renderGen)return;
+if(it.mount.parentNode)it.mount.parentNode.removeChild(it.mount);
+it.pre.style.display='';
+});
+});
+}
+render();
+if(mq&&mq.addEventListener)mq.addEventListener('change',render);
+if(typeof MutationObserver!=='undefined')new MutationObserver(render).observe(root,{attributes:true,attributeFilter:['data-theme']});
+})();</script>
+<!--claude-mermaid-runtime-end-->
+</body></html>
