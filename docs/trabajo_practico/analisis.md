@@ -242,7 +242,248 @@
 
 **Pendiente.** Diagrama de clases conceptual con entidades, atributos principales y relaciones, sin detalles de implementación.
 
+5.1 Descripción General
+
+El modelo de dominio de **DevStudy** representa las principales entidades del sistema y las relaciones existentes entre ellas. Su propósito es describir conceptualmente la estructura de los datos del negocio sin entrar en detalles de implementación o tecnología.
+
 ---
+
+## 5.2 Entidades del Dominio
+
+### Usuario
+
+Representa a cualquier persona que utiliza la plataforma.
+
+**Atributos principales:**
+
+- idUsuario
+- nombre
+- correo
+- contraseña
+- estado
+- rol
+
+**Observación:** Un usuario puede tener el rol de Estudiante, Docente o Administrador.
+
+### Estudiante
+
+Especialización de Usuario.
+
+**Atributos adicionales:**
+
+- fechaRegistro
+
+**Responsabilidades:**
+
+- Inscribirse en materias.
+- Consultar materiales.
+- Entregar ejercicios.
+- Participar en foros.
+- Consultar progreso académico.
+
+### Docente
+
+Especialización de Usuario.
+
+**Atributos adicionales:**
+
+- especialidad
+
+**Responsabilidades:**
+
+- Gestionar materiales.
+- Publicar ejercicios.
+- Evaluar entregas.
+- Responder consultas.
+
+### Administrador
+
+Especialización de Usuario.
+
+**Responsabilidades:**
+
+- Gestionar usuarios.
+- Gestionar materias.
+- Asignar docentes.
+- Moderar contenido.
+
+### Materia
+
+Representa una asignatura disponible dentro de la plataforma.
+
+**Atributos principales:**
+
+- idMateria
+- nombre
+- descripcion
+- estado
+
+### Inscripción
+
+Representa la relación entre estudiante y materia.
+
+**Atributos principales:**
+
+- idInscripcion
+- fechaInscripcion
+- estado
+
+### Material
+
+Representa recursos académicos publicados por docentes.
+
+**Atributos principales:**
+
+- idMaterial
+- titulo
+- descripcion
+- tema
+- tipo
+- urlArchivo
+- fechaPublicacion
+
+### Ejercicio
+
+Representa una actividad práctica de programación.
+
+**Atributos principales:**
+
+- idEjercicio
+- titulo
+- enunciado
+- tema
+- dificultad
+- fechaLimite
+
+### Entrega
+
+Representa la solución enviada por un estudiante para un ejercicio.
+
+**Atributos principales:**
+
+- idEntrega
+- fechaHoraEntrega
+- archivoAdjunto
+- codigoFuente
+- comentario
+- estado
+
+### Evaluación
+
+Representa la corrección realizada por el docente.
+
+**Atributos principales:**
+
+- idEvaluacion
+- calificacion
+- retroalimentacion
+- fechaEvaluacion
+
+### Consulta
+
+Representa una pregunta publicada dentro del foro académico.
+
+**Atributos principales:**
+
+- idConsulta
+- titulo
+- descripcion
+- fragmentoCodigo
+- fechaCreacion
+- estado
+
+### Respuesta
+
+Representa una respuesta a una consulta del foro.
+
+**Atributos principales:**
+
+- idRespuesta
+- contenido
+- fechaRespuesta
+- esSolucion
+
+### Progreso
+
+Representa el avance académico de un estudiante en una materia.
+
+**Atributos principales:**
+
+- idProgreso
+- porcentajeAvance
+- materialesCompletados
+- ejerciciosEntregados
+- ejerciciosEvaluados
+
+### Notificación
+
+Representa avisos generados por el sistema.
+
+**Atributos principales:**
+
+- idNotificacion
+- mensaje
+- fechaEnvio
+- leida
+
+---
+
+## 5.3 Relaciones del Modelo de Dominio
+
+| Entidad 1 | Relación | Entidad 2 |
+|------------|------------|------------|
+| Usuario | se especializa en | Estudiante |
+| Usuario | se especializa en | Docente |
+| Usuario | se especializa en | Administrador |
+| Estudiante | realiza | Inscripción |
+| Materia | posee | Inscripción |
+| Docente | imparte | Materia |
+| Materia | contiene | Material |
+| Materia | contiene | Ejercicio |
+| Materia | contiene | Consulta |
+| Estudiante | realiza | Entrega |
+| Ejercicio | recibe | Entrega |
+| Entrega | genera | Evaluación |
+| Docente | realiza | Evaluación |
+| Consulta | posee | Respuesta |
+| Usuario | publica | Consulta |
+| Usuario | publica | Respuesta |
+| Estudiante | posee | Progreso |
+| Materia | posee | Progreso |
+| Usuario | recibe | Notificación |
+
+---
+
+## 5.4 Diagrama Conceptual de Clases
+
+```text
+Usuario
+│
+├── Estudiante
+├── Docente
+└── Administrador
+
+Estudiante -----< Inscripción >----- Materia
+                     |
+                     |
+                  Progreso
+
+Materia -----< Material
+
+Materia -----< Ejercicio -----< Entrega ----- Evaluación
+
+Materia -----< Consulta -----< Respuesta
+
+Usuario -----< Notificación
+
+Docente ----- Publica -----> Material
+Docente ----- Publica -----> Ejercicio
+
+Estudiante -----> Consulta
+Estudiante -----> Respuesta
+
+Docente -------> Respuesta
+```
 
 ## 6. Diagramas de comportamiento *(Federico Arrua)*
 
