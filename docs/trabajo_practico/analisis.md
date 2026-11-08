@@ -240,8 +240,6 @@
 
 ## 5. Modelo de dominio *(Federico Arrua)*
 
-**Pendiente.** Diagrama de clases conceptual con entidades, atributos principales y relaciones, sin detalles de implementación.
-
 5.1 Descripción General
 
 El modelo de dominio de **DevStudy** representa las principales entidades del sistema y las relaciones existentes entre ellas. Su propósito es describir conceptualmente la estructura de los datos del negocio sin entrar en detalles de implementación o tecnología.
@@ -487,9 +485,115 @@ Docente -------> Respuesta
 
 ## 6. Diagramas de comportamiento *(Federico Arrua)*
 
-**Pendiente.** Diagramas de secuencia o de actividad de los flujos principales de la sección 4.3. Sugeridos: CU-06, CU-11, CU-12 y CU-15/CU-16.
+## 6.1 Diagrama de Secuencia - CU-06 Publicar Material
+
+```text
+Docente -> Sistema : Seleccionar "Nuevo Material"
+
+Sistema -> Docente : Mostrar formulario
+
+Docente -> Sistema : Completar datos y adjuntar archivo
+
+Sistema -> Sistema : Validar datos
+
+alt Datos válidos
+
+    Sistema -> Base de Datos : Guardar material
+
+    Base de Datos -> Sistema : Confirmación
+
+    Sistema -> Sistema : Generar notificaciones
+
+    Sistema -> Estudiantes : Notificar nuevo material
+
+    Sistema -> Docente : Confirmar publicación
+
+else Datos inválidos
+
+    Sistema -> Docente : Mostrar error
+
+end
+```
 
 ---
+
+## 6.2 Diagrama de Secuencia - CU-11 Entregar Ejercicio
+
+```text
+Estudiante -> Sistema : Abrir ejercicio
+
+Sistema -> Estudiante : Mostrar enunciado
+
+Estudiante -> Sistema : Subir solución
+
+Sistema -> Sistema : Validar entrega
+
+alt Entrega válida
+
+    Sistema -> Base de Datos : Registrar entrega
+
+    Base de Datos -> Sistema : Confirmar
+
+    Sistema -> Estudiante : Entrega registrada
+
+else Entrega inválida
+
+    Sistema -> Estudiante : Mostrar error
+
+end
+```
+
+---
+
+## 6.3 Diagrama de Secuencia - CU-12 Evaluar Entrega
+
+```text
+Docente -> Sistema : Ver entregas pendientes
+
+Sistema -> Docente : Mostrar lista
+
+Docente -> Sistema : Seleccionar entrega
+
+Sistema -> Docente : Mostrar solución
+
+Docente -> Sistema : Ingresar nota y comentarios
+
+Sistema -> Base de Datos : Guardar evaluación
+
+Base de Datos -> Sistema : Confirmación
+
+Sistema -> Estudiante : Notificar evaluación
+
+Sistema -> Docente : Confirmar evaluación
+```
+
+---
+
+## 6.4 Diagrama de Secuencia - CU-15 y CU-16 Foro Académico
+
+```text
+Estudiante -> Sistema : Crear consulta
+
+Sistema -> Base de Datos : Guardar consulta
+
+Base de Datos -> Sistema : Confirmación
+
+Sistema -> Docentes : Notificar nueva consulta
+
+Docente -> Sistema : Responder consulta
+
+Sistema -> Base de Datos : Guardar respuesta
+
+Base de Datos -> Sistema : Confirmación
+
+Sistema -> Estudiante : Notificar respuesta
+
+Estudiante -> Sistema : Marcar respuesta como solución
+
+Sistema -> Base de Datos : Actualizar estado
+
+Sistema -> Usuario : Consulta cerrada
+```
 
 ## 7. Prototipo de interfaz (mockups) *(Elias Salinas)*
 
